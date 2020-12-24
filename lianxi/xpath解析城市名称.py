@@ -12,12 +12,17 @@ headers = {
 }
 page_text = requests.get(url=url, headers=headers).text
 tree = etree.HTML(page_text)
-hot_li_list = tree.xpath('//div[@class="bottom"]/ul/li')
+# hot_li_list = tree.xpath('//div[@class="bottom"]/ul/li')
 all_city_names = []
-for li in hot_li_list:
-    hot_cit_name = li.xpath('./a/text()')[0]
-    all_city_names.append(hot_cit_name)
-city_names = tree.xpath('//div[@class="bottom"]/ul/div[2]/li')
-for li in city_names:
-    city_name = li.xpath('./a/text()')[0]
-    all_city_names.append(city_name)
+# for li in hot_li_list:
+#     hot_cit_name = li.xpath('./a/text()')[0]
+#     all_city_names.append(hot_cit_name)
+# city_names = tree.xpath('//div[@class="bottom"]/ul/div[2]/li')
+# for li in city_names:
+#     city_name = li.xpath('./a/text()')[0]
+#     all_city_names.append(city_name)
+all_city_li = tree.xpath('//div[@class="bottom"]/ul/div[2]/li | //div[@class="bottom"]/ul/div[2]/li')
+for li in all_city_li:
+    city_names = li.xpath('./a/text()')[0]
+    all_city_names.append(city_names)
+print(all_city_names)
