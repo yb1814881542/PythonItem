@@ -10,13 +10,13 @@ url = "http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList"
 for page in range(1, 6):
     page = str(page)
     data = {
-        'on': 'true',
+        'on': ' true',
         'page': page,
-        'pageSize': '15',
-        'productName': '',
+        'pageSize': ' 15',
+        'productName': ' ',
         'conditionType': '1',
-        'applyname': '',
-        'applysn': '',
+        'applyname': ' ',
+        'applysn': ' ',
     }
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
