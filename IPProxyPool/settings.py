@@ -3,3 +3,5 @@
 # @Author  : YB
 # @File    : settings.py
 # @Software: PyCharm
+
+MAX_SCORE = 50
