@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/1/8 18:29
 # @Author  : YB
-# @File    : 拉钩.py
+# @File    : selenium拉钩.py
 # @Software: PyCharm
 
 from selenium.webdriver import Chrome
